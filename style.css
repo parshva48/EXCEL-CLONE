@@ -1,0 +1,263 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+
+}
+.menu-container{
+ height: 4rem;
+ display: flex;
+ align-items: center;
+ gap: 2rem;
+    padding-left: 1rem;
+
+}
+.formula-container{
+    height:2rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   font-family: 'Cinzel', serif;
+   font-weight: bold;
+}
+.sheet-container{
+    height:2rem;
+    background-color: lightgray;
+    display: flex;
+}
+.grid-container{
+    height: calc( 100vh - ( 4rem + 2rem + 2rem ));
+    /* background-color: lightyellow; */
+    overflow: auto;
+    position: relative;
+}
+.add-btn{
+    height:100%;
+    width:3rem;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sheets{
+    height:100%;
+    width:calc( 100vw - 3rem );
+   display: flex;
+   overflow: auto;
+}
+.sheets::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .sheets {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+.sheet{
+    height: 100%;
+    min-width: 6rem;
+    width:6rem;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.fas{
+    font-size:1.5rem;
+    color:limegreen;
+}
+
+.cols{
+    height:2rem;
+    display: flex;
+    background-color: limegreen;
+    width: fit-content;
+    position: absolute;
+    left:2rem;
+    bottom: 44.1rem;
+    color:white
+
+}
+.col{
+    height: 100%;
+   min-width: 5rem;
+    border: 1px solid grey;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+   
+}
+.side-box{
+  height: 2rem;
+  min-width: 2rem;
+  width:2rem;
+  background-color: grey;
+}
+.row{
+    height: 2rem;
+    width:2rem;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: limegreen;
+    border: 0.5px solid grey;
+    color:white
+}
+.eachrows{
+    height:2rem;
+    display: flex;
+    
+}
+.grid{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+.address-input{
+    height: 75%;
+    width:10%;
+    border-right: 1px solid;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 0;
+    font-size: large;
+    /* //background-color: lightgrey; */
+    
+}
+.formula-input{
+    height:75%;
+    width:80%;
+    border-left: 1px solid;
+    border-top: 0;
+    border-bottom: 0;
+    font-size: large;
+    border-right: none;
+    
+
+}
+.font-size{
+    height: 46%;
+    width: 5%;
+    font-size: 1rem;
+}
+.font-family{
+    height: 46%;
+    width: 10%;
+    font-size: 1rem;
+}
+.bui-container{
+    border:1px solid;
+    height:46%;
+    width:10rem;
+    display: flex;
+}
+.bui-container>*{
+    height:100%;
+    width:33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger; 
+   
+}
+.align-container{
+    border:1px solid;
+    height:46%;
+    width:10rem;
+    display: flex;
+}
+.align-container>*{
+    height:100%;
+    width:33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger; 
+  
+}
+.cell{
+    font-size: 1rem;
+    height: 100%;
+    min-width: 5rem;
+     border: 1px solid;
+     font-size: large;
+
+}
+.active-state{
+   
+        background-color:rgb(176, 230, 176);
+}
+
+.color-container{
+    font-family: 'Cinzel', serif;
+    font-size: large;
+    color: grey;
+    font-weight: 500px;
+}
+.fa-solid{
+    font-size: large;
+}
+.NOD-container{
+    border:1px solid;
+    height:60%;
+    width:12rem;
+    display: flex;
+    margin-left: 34rem;
+    border: none;
+}
+
+.NOD-container>*{
+    height:100%;
+    width:33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger; 
+    color: green;
+   
+}
+.fa-solid {
+    font-size: 1.5rem;
+   
+}
+.new{
+    font-size: 1.8rem;
+    border-right: 1px solid;
+    
+}
+.open{
+    font-size: 1.8rem;
+    border-right: 1px solid;
+}
+.new:hover{
+    background-color: rgb(176, 230, 176);
+
+}
+.open:hover{
+    background-color: rgb(176, 230, 176);
+
+}
+.download:hover{
+    background-color: rgb(176, 230, 176);
+
+}
+.bold:hover{
+    background-color:rgb(176, 230, 176);
+}
+.italic:hover{
+    background-color:rgb(176, 230, 176);
+}
+.underline:hover{
+    background-color:rgb(176, 230, 176);
+}
+.left-align:hover{
+    background-color:rgb(176, 230, 176);
+}
+.centre-align:hover{
+    background-color:rgb(176, 230, 176);
+}
+.right-align:hover{
+    background-color:rgb(176, 230, 176);
+}
