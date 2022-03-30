@@ -57,9 +57,6 @@
             <input type="color" class="font-color">
         </div>
         <div class="NOD-container">
-            <div class="new">
-                <i class="fa-thin fa-plus"></i>
-            </div>
             <div class="open">
                 <i class="fa-solid fa-folder-open"></i>
             </div>
@@ -70,12 +67,15 @@
 
     </div>
     <div class="formula-container">
-        <input type="text" class="address-input">
+        <input type="text" class="address-input" readonly>
         <input type="text" placeholder="   Enter Your Formula Here" class="formula-input">
     </div>
     <div class="grid-container">
-        <div class="side-box"></div>
+        <div class="outer-box">
+            <div class="side-box"></div>
             <div class="cols"></div>
+        </div>
+       
         <div class="left-col"></div>
         <div class="grid"></div>
     </div>
@@ -89,8 +89,9 @@
 
     </div>
 
-    <script src="script.js"></script>
     <script src="grid.js"></script>
     <script src="formula.js"></script>
+    <script src="script.js"></script>
+    <script src="down_open.js"></script>
 </body>
 </html>

@@ -12,6 +12,8 @@ let fontsize=document.querySelector(".font-size");
 let fontfamily=document.querySelector(".font-family");
 let fontcolor=document.querySelector(".font-color");
 let formulabar=document.querySelector(".formula-input");
+let curridx=0;
+let idarr=[];
 for(let i=0;i<100;i++)
 {
     let eachrow=document.createElement("div");
@@ -26,22 +28,24 @@ for(let i=0;i<26;i++)
     cols.appendChild(eachcol);
     eachcol.setAttribute("class","col");
 }
+let allsheet=[];
 let celldata=[];
-for(let i=0;i<100;i++)
-{
-    let row=[];
-    let eachrow=document.createElement("div");
-    eachrow.setAttribute("class","eachrows");
-    grid.appendChild(eachrow);
-    for(let j=0;j<26;j++)
-    {
+CreateSheet();
+
+function CreateSheet(){
+  let tempcelldata=[];
+  for(let i=0;i<100;i++)
+  {
+      let row=[];
+      for(let j=0;j<26;j++)
+      {
         let obj={
-            isbold:false,
-            isitalic:false,
-            isunderline:false,
-            isla:false,
-            isca:false,
-            isra:false,
+            isbold:"false",
+            isitalic:"false",
+            isunderline:"false",
+            isla:"false",
+            isca:"false",
+            isra:"false",
             fs:"16",
             ff:"monospace",
             color:"black",
@@ -53,6 +57,24 @@ for(let i=0;i<100;i++)
             children:[]
         }
         row.push(obj);
+      }
+      tempcelldata.push(row);
+
+
+  }
+allsheet.push(tempcelldata);
+celldata=tempcelldata;
+
+}
+for(let i=0;i<100;i++)
+{
+   
+    let eachrow=document.createElement("div");
+    eachrow.setAttribute("class","eachrows");
+    grid.appendChild(eachrow);
+    for(let j=0;j<26;j++)
+    {
+        
         let cell=document.createElement("div");
         cell.setAttribute("class","cell");
         eachrow.appendChild(cell);
@@ -61,13 +83,12 @@ for(let i=0;i<100;i++)
        cell.setAttribute("uid",code);
        cell.addEventListener("click",function(e){
            handleaddress(e.currentTarget);
-        
+          idarr[curridx]=code;
          HandleToolBar(i,j);
-         formulabar.value=obj.formula;
+         formulabar.value=celldata[i][j].formula;
 
        })
-    }
-    celldata.push(row);   
+    }  
 }
 function HandleToolBar(i,j)
 {
@@ -269,3 +290,4 @@ cellnode.style.color=color;
 
 let fcell=document.querySelector(`.cell[uid="A1"]`);
 fcell.click();
+

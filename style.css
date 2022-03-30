@@ -5,6 +5,9 @@ body{
     margin: 0;
 
 }
+
+
+
 .menu-container{
  height: 4rem;
  display: flex;
@@ -23,7 +26,6 @@ body{
 }
 .sheet-container{
     height:2rem;
-    background-color: lightgray;
     display: flex;
 }
 .grid-container{
@@ -35,10 +37,10 @@ body{
 .add-btn{
     height:100%;
     width:3rem;
-    border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 .sheets{
     height:100%;
@@ -58,15 +60,15 @@ body{
     height: 100%;
     min-width: 6rem;
     width:6rem;
-    border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-left: 2px solid lightgray;
 
 }
 .fas{
     font-size:1.5rem;
-    color:limegreen;
+    color: #107c41
 }
 
 .cols{
@@ -76,7 +78,7 @@ body{
     width: fit-content;
     position: absolute;
     left:2rem;
-    bottom: 44.1rem;
+    top: -0.01rem;
     color:white
 
 }
@@ -87,7 +89,8 @@ body{
     font-size: large;
     display: flex;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+    font-weight: bold;
    
 }
 .side-box{
@@ -102,8 +105,9 @@ body{
     text-align: center;
     padding-top: 0.5rem;
     background-color: limegreen;
-    border: 0.5px solid grey;
-    color:white
+    border: 0.5px solid lightgrey;
+    color:white;
+    font-weight: bold;
 }
 .eachrows{
     height:2rem;
@@ -123,6 +127,7 @@ body{
     border-top: 0;
     border-bottom: 0;
     font-size: large;
+    outline: none;
     /* //background-color: lightgrey; */
     
 }
@@ -134,6 +139,7 @@ body{
     border-bottom: 0;
     font-size: large;
     border-right: none;
+    outline: none;
     
 
 }
@@ -181,8 +187,10 @@ body{
     font-size: 1rem;
     height: 100%;
     min-width: 5rem;
-     border: 1px solid;
+     border: 1px solid lightgrey;
      font-size: large;
+     font-family: monospace;
+
 
 }
 .active-state{
@@ -204,8 +212,9 @@ body{
     height:60%;
     width:12rem;
     display: flex;
-    margin-left: 34rem;
+    margin-left: 46rem;
     border: none;
+    margin-top: 0.5rem;
 }
 
 .NOD-container>*{
@@ -260,4 +269,19 @@ body{
 }
 .right-align:hover{
     background-color:rgb(176, 230, 176);
+}
+.active-sheet{
+    border-bottom: 2.5px solid #107c41;
+}
+.sticky {
+    position: fixed;
+    top: 6rem;
+    z-index: 2;
+    
+}
+.sticky1 {
+    position: fixed;
+    top: 4rem;
+    z-index: 2;
+    
 }
